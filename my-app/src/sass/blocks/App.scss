@@ -1,0 +1,85 @@
+.App {
+  font-family: sans-serif;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.App__information
+{
+  width: 440px;
+  padding-left: 100px;
+}
+
+.App__title::before
+{
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 17px;
+  background-image: url("./img/rectangle.png");
+  margin-top: -40px;
+}
+
+  .App__title
+  {
+    width: 440px;
+    font-family: "Open Sans Bold";
+    font-size: 36px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 48px;
+    text-align: left;
+    margin-top: 90px;
+  }
+
+  .App__item
+  {
+    width: 400px;
+    font-family: "SF-Regular";
+    font-size: 16px;
+    color: #7A8F99;
+    letter-spacing: 0;
+    line-height: 24px;
+    list-style-type: none;
+  }
+
+  .App__item:nth-child(1)
+  {
+    margin-bottom: 16px;
+  }
+
+    .App__item::before
+    {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 14px;
+      background-image: url("./img/check.png");
+      margin-left: -40px;
+    }
+
+.App__images
+{
+  width: auto;
+}
+
+.App__images--laptop
+{
+  margin-top: 90px;
+}
+
+.App__images--laptop img
+{
+  width: 745px;
+  height: 613px;
+}
+
+.App__images--mobile img
+{
+  width: 245px;
+  height: 482px;
+  position: relative;
+  bottom: 500px;
+}

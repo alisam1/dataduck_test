@@ -1,0 +1,45 @@
+.Form
+{
+  width: 440px;
+  margin-top: 50px;
+}
+
+.Form input
+{
+  width: 440px;
+  height: 64px;
+  background: #F5F8FA;
+  border-radius: 4px;
+  margin-bottom: 25px;
+}
+
+.Form input[type=text]
+{
+  font-family: "SF-Regular";
+  font-size: 16px;
+  color: #000;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.Form__button
+{
+    font-family: "Open Sans Bold";
+    width: 440px;
+    height: 56px;
+    border-radius: 6px;
+    border: none;
+    background-color: #1C945D;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.error{
+  margin-left: 5px;
+  font-size: 13px;
+  color: red;
+}
