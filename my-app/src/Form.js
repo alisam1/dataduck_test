@@ -8,7 +8,7 @@ class Form extends Component {
 
       this.state = {
         fields: {},
-        errors: {},
+        errors: {}
       }
     }
 
@@ -28,20 +28,20 @@ class Form extends Component {
         errors["email"] = "Некорректный Email";
       }
 
-      if(fields["email"].value == fields["email"].value ){
-        formIsValid = false;
-        errors["email"] = "Пользователь с таким e-mail уже существует";
-      }
-
       if(typeof fields["email"] !== "undefined"){
         let lastAtPos = fields["email"].lastIndexOf('@');
         let lastDotPos = fields["email"].lastIndexOf('.');
 
         if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') == -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
           formIsValid = false;
-          errors["email"] = "Некорректный Email";
+          errors["validEmail"] = "Некорректный Email";
         }
       }
+
+      if(fields["email"].value == fields["email"].value){
+          formIsValid = false;
+          errors["emailValue"] = 'Учётная запись с указанным e-mail уже существует';
+        }
 
       //Password
 
@@ -80,26 +80,34 @@ class Form extends Component {
     }
 
     render(){
+      const {agree} = this.state;
+      const borderColorEmail = this.state.fields["email"]===true?"#1C945D":"#E15433";
+      const borderColorPassword = this.state.fields["password"]===true?"#1C945D":"#E15433";
       return (
         <div>
           <form className="Form" onSubmit= {this.contactSubmit.bind(this)}>
-            <div className="col-md-6">
+            <div className="Form__main">
               <fieldset>
-                <input refs="email" type="text" size="30" placeholder="Email" onChange={this.handleChange.bind(this, "email")} value={this.state.fields["email"]}/>
-                <span className="error">{this.state.errors["email"]}</span>
+                <input refs="email" type="text" size="30" placeholder="Email" onChange={this.handleChange.bind(this, "email")} value={this.state.fields["email"]} style={{borderColor:borderColorEmail}}/>
+                <span className="errorEmail" style={{display: this.state.errors["validEmail"]?'block':'none'}}>Некорректный Email</span>
                 <br/>
-                <input refs="password" type="text" size="30" placeholder="Придумайте пароль" onChange={this.handleChange.bind(this, "password")} value={this.state.fields["password"]}/>
-                <span className="errorPassword error">{this.state.errors["password"]}</span>
+                <input refs="password" type="password"  size="30" placeholder="Придумайте пароль" onChange={this.handleChange.bind(this, "password")} value={this.state.fields["password"]} style={{borderColor:borderColorPassword}}/>
+                <span className="errorPassword" style={{display: this.state.errors["password"]?'block':'none'}}>Неверный пароль</span>
               </fieldset>
             </div>
-            <label className = "add_checkrule">
-            <input type = "checkbox"/>Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг.
+            <ul className="Form__choise">
+              	<li><a href="#">P</a></li>
+              	<li><a href="#">S</a></li>
+              	<li><a href="#">E</a></li>
+              </ul>
+            <label className="checkbox">
+              <input type="checkbox" onChange={this.handleCheckboxChange} />
+              <div className="checkbox__text">Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг.</div>
             </label>
-            <div className="col-md-12">
+            <div className = "email__error" style={{display: this.state.errors["emailValue"]?'block':'none'}}>Учётная запись с указанным e-mail <span>уже существует</span></div>
               <fieldset>
-                <button className="Form__button" id="submit" value="Submit">Зарегистрироваться</button>
+                <button className="Form__button" id="submit" value="Submit" disabled = {!agree}>Зарегистрироваться</button>
               </fieldset>
-            </div>
           </form>
         </div>
       )

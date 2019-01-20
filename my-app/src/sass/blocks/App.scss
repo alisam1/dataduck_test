@@ -2,6 +2,12 @@
   font-family: sans-serif;
   text-align: left;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.App__main {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -9,45 +15,99 @@
 .App__information
 {
   width: 440px;
-  padding-left: 100px;
+  padding-left: 170px;
 }
 
-.App__title::before
+.App__login
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.App__logo
+{
+  margin-left: -40px;
+}
+
+.Login__button
+{
+  width: 120px;
+  height: 40px;
+  border: 1px solid #D8E1E6;
+  border-radius: 4px;
+  background-color: inherit;
+  font-family:  "OpenSans-Bold";
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 24px;
+  padding-left: 30px;
+  position: relative;
+  left: 60px;
+  cursor: pointer;
+}
+
+.Login__button:hover
+{
+  border: 1px solid #1C945D;
+  background-color: #1C945D;
+}
+
+.Login__button:active
+{
+  border: 1px solid rgba(28, 148, 93, 0.4);
+  background-color: rgba(28, 148, 93, 0.4);
+}
+
+.Login__button::before
 {
   content: "";
   position: absolute;
-  width: 140px;
-  height: 17px;
-  background-image: url("./img/rectangle.png");
-  margin-top: -40px;
+  width: 24px;
+  height: 24px;
+  background-image: url("./img/user.svg");
+  margin-left: -30px;
 }
 
-  .App__title
+.App__title
   {
     width: 440px;
-    font-family: "Open Sans Bold";
-    font-size: 36px;
+    font-family: "OpenSans-Bold";
+    font-size: 38px;
     color: #FFFFFF;
     letter-spacing: 0;
-    line-height: 48px;
+    line-height: 50px;
     text-align: left;
-    margin-top: 90px;
+    margin-top: 50px;
   }
 
   .App__item
   {
-    width: 400px;
+    width: 440px;
     font-family: "SF-Regular";
-    font-size: 16px;
+    font-size: 18px;
     color: #7A8F99;
     letter-spacing: 0;
-    line-height: 24px;
+    line-height: 26px;
     list-style-type: none;
+    position: relative;
+    top: 5px;
+    left: 5px;
+  }
+
+  .App__item span
+  {
+    display: block;
   }
 
   .App__item:nth-child(1)
   {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 
     .App__item::before
@@ -57,23 +117,31 @@
       width: 18px;
       height: 14px;
       background-image: url("./img/check.png");
-      margin-left: -40px;
+      margin-left: -42px;
+      margin-top: 5px;
     }
 
 .App__images
 {
   width: auto;
+  position: relative;
+  right: 0px;
 }
 
 .App__images--laptop
 {
-  margin-top: 90px;
+  margin-top: 50px;
 }
 
 .App__images--laptop img
 {
-  width: 745px;
-  height: 613px;
+  width: 900px;
+  height: 650px;
+}
+
+.App__images--ipad img
+{
+display: none;
 }
 
 .App__images--mobile img
@@ -81,5 +149,138 @@
   width: 245px;
   height: 482px;
   position: relative;
-  bottom: 500px;
+  bottom: 470px;
+  right: 30px;
+  }
+
+  @media screen and (min-width: 1201px) and (max-width: 1440px) {
+
+    .App__information
+    {
+      width: 440px;
+      padding-left: 20px;
+    }
+
+    .App__images--laptop img
+    {
+      width: 700px;
+      height: 650px;
+    }
+
+    .App__images--ipad img
+    {
+    display: none;
+    }
+
+
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+
+    .App__item
+    {
+      width: 350px;
+      z-index: 9999;
+    }
+
+    .App__images--laptop
+    {
+      display: none;
+    }
+
+    .App__images--laptop img
+    {
+      display: none;
+    }
+
+    .App__images--ipad img
+    {
+      display: block;
+      width: 350px;
+      margin-top: 210px;
+      z-index: 9998;
+    }
+
+    .App__information
+    {
+      width: 350px;
+      padding-left: 20px;
+    }
+
+    .App__images--mobile img {
+    width: 200px;
+    height: 382px;
+    position: relative;
+    bottom: 380px;
+    right: 0px;
 }
+
+
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+
+    .App
+    {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .App__main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .App__title
+    {
+      width: 320px;
+      text-align: left;
+    }
+
+    .App__item
+    {
+      width: 280px;
+      font-size: 16px;
+      z-index: 9999;
+    }
+
+    .App__images--laptop
+    {
+      display: none;
+    }
+
+    .App__images--laptop img
+    {
+      display: none;
+    }
+
+    .App__images--ipad
+    {
+      display: none;
+    }
+
+
+    .App__images--ipad img
+    {
+      display: none;
+    }
+
+    .App__information
+    {
+      width: 320px;
+      padding-left: 0px;
+    }
+
+    .App__images--mobile img {
+      width: 200px;
+      height: 382px;
+      position: relative;
+      bottom: -30px;
+      right: 0px;
+      margin: 0 auto;
+      left: 60px;
+}
+
+
+  }

@@ -1,10 +1,13 @@
 @import "sass/variables.scss";
 @import "sass/blocks/App.scss";
 @import "sass/blocks/Form.scss";
+@import "sass/blocks/container.scss";
+@import "sass/blocks/normalize.scss";
+
 
 
 @font-face {
-	font-family: 'Open Sans';
+	font-family: 'OpenSans';
 	src: url('./fonts/OpenSans/open_sans.eot'); /* IE 9 Compatibility Mode */
 	src: url('./fonts/OpenSans/open_sans.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
 		url('./fonts/OpenSans/open_sans.woff2') format('woff2'), /* Super Modern Browsers */
@@ -14,7 +17,7 @@
 }
 
 @font-face {
-	font-family: 'Open Sans Bold';
+	font-family: 'OpenSans-Bold';
 	src: url('./fonts/OpenSans/open_sans_bold.eot'); /* IE 9 Compatibility Mode */
 	src: url('./fonts/OpenSans/open_sans_bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
 		url('./fonts/OpenSans/open_sans_bold.woff2') format('woff2'), /* Super Modern Browsers */

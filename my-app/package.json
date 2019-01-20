@@ -23,6 +23,9 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "redux-saga": "^0.16.2"
+    "babel-loader": "^8.0.4",
+    "node-sass": "^4.11.0",
+    "redux-saga": "^0.16.2",
+    "webpack": "^4.19.1"
   }
 }
