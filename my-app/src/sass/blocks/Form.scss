@@ -180,108 +180,9 @@
   border: 1px solid #20A86B;
 	}
 
-  .errorEmail
-  {
-    width: 248px;
-    background-color: #E15433;
-    margin-left: 15px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    position: absolute;
-    top: 325px;
-    left: 280px;
-    color: #fff;
-    text-align: center;
-}
-
-.errorEmail::after
-{
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 9px;
-  background-image: url("./img/rect.png");
-  margin-top: 26px;
-  margin-left: -85px;
-}
-
-
-.errorEmail input
-{
-  border: 1px solid #E15433;
-}
-
-.errorPassword{
-  width: 248px;
-  background-color: #E15433;
-  margin-left: 15px;
-  border-radius: 4px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  position: absolute;
-  top: 400px;
-  left: 280px;
-  color: #fff;
-  text-align: center;
-}
-
-.errorPassword::after
-{
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 9px;
-  background-image: url("./img/rect.png");
-  margin-top: 26px;
-  margin-left: -75px;
-}
-
-.email__error
-{
-  width: 420px;
-  background-color: #E15433;
-  margin-left: 15px;
-  border-radius: 4px;
-  display: block;
-  font-family: "SF-Regular";
-  font-size: 16px;
-  color: #FFFFFF;
-  letter-spacing: 0;
-  line-height: 24px;
-  padding-left: 70px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.email__error span
-{
-  display: block;
-}
-
-.email__error::before
-{
-  content: "";
-  position: absolute;
-  width: 17px;
-  height:17px;
-  background-image: url("./img/attention.png");
-  margin-left: -40px;
-  margin-top: 15px;
-}
 
 @media screen and (min-width: 1201px) and (max-width: 1400px) {
-
-    .errorEmail
-      {
-        left: 120px;
-       }
-
-    .errorPassword
-      {
-      left: 120px;
-      }
-
+  
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -345,40 +246,6 @@
     padding: 8px 37px;
   }
 
-  .errorEmail {
-    width: 248px;
-    background-color: #E15433;
-    margin-left: 15px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    position: absolute;
-    top: 350px;
-    left: 80px;
-    color: #fff;
-    text-align: center;
-}
-
-.errorPassword {
-    width: 248px;
-    background-color: #E15433;
-    margin-left: 15px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    position: absolute;
-    top: 425px;
-    left: 80px;
-    color: #fff;
-    text-align: center;
-}
-
-.email__error
-{
-    width: 310px;
-  }
-
-
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -430,40 +297,6 @@
   .Form__button
   {
     width: 320px;
-  }
-
-  .errorEmail {
-    width: 248px;
-    background-color: #E15433;
-    margin-left: 15px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    position: absolute;
-    top: 430px;
-    left: 50px;
-    color: #fff;
-    text-align: center;
-}
-
-.errorPassword {
-    width: 248px;
-    background-color: #E15433;
-    margin-left: 15px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    position: absolute;
-    top: 500px;
-    left: 50px;
-    color: #fff;
-    text-align: center;
-}
-
-.email__error
-{
-    width: 250px;
-    font-size: 12px;
   }
 
 }
